@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Code & Coffee: Java Jams 2027",
+    "date": "2027-01-15",
+    "venue": "Tech Space, London",
+    "description": "Do you like caffeine? Do you like code? You're in the right place.",
+    "category": "Technology"
+  },
+  {
+    "id": 2,
+    "title": "Pixel Perfect: Digital Design Expo",
+    "date": "2027-02-10",
+    "venue": "Creative Quarter, Manchester",
+    "description": "Digital design at the cutting edge.",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Plant-Powered Planet",
+    "date": "2027-03-12",
+    "venue": "Sustainability Hub, Brighton",
+    "description": "Let's explore sustainable living through plant-based innovation and eco-friendly practices.",
+    "category": "Sustainability"
+  },
+  {
+    "id": 4,
+    "title": "Byte Me! Gaming & eSports Con",
+    "date": "2027-04-05",
+    "venue": "GameWorld Arena, Birmingham",
+    "description": "Tournaments, panels, sneak peeks at upcoming releases - and pizza!",
+    "category": "Gaming"
+  },
+  {
+    "id": 5,
+    "title": "The Meme Economy: Viral Trends 2027",
+    "date": "2027-05-20",
+    "venue": "Influence Hall, Bristol",
+    "description": "Decoding internet culture and discussing how memes shape industries and brand strategies.",
+    "category": "Social Media"
+  },
+  {
+    "id": 6,
+    "title": "Future Frontier: AI & Robotics Forum",
+    "date": "2027-06-18",
+    "venue": "Innovation Centre, Cambridge",
+    "description": "An in-depth look at the intersection of artificial intelligence and robotics shaping our world.",
+    "category": "Technology"
+  },
+  {
+    "id": 7,
+    "title": "Books & Brews: Storyteller's Retreat",
+    "date": "2027-07-22",
+    "venue": "The Old Library, Edinburgh",
+    "description": "An intimate gathering for writers and book lovers to share ideas over craft beer.",
+    "category": "Literature"
+  },
+  {
+    "id": 8,
+    "title": "Foodie Futures: The Culinary Innovation Fair",
+    "date": "2027-08-14",
+    "venue": "Taste Pavilion, Glasgow",
+    "description": "Showcasing the future of food technology and innovative recipes.",
+    "category": "Food"
+  },
+  {
+    "id": 9,
+    "title": "Starry Nights: Astronomy & Beyond",
+    "date": "2027-09-10",
+    "venue": "Cosmos Centre, Cardiff",
+    "description": "Stargaze and explore the universe with us.",
+    "category": "Science"
+  },
+  {
+    "id": 10,
+    "title": "Health Hackathon: Innovating Wellness",
+    "date": "2027-10-25",
+    "venue": "Wellness Hub, Leeds",
+    "description": "A two-day competition for developing tech-driven solutions for health and wellness challenges.",
+    "category": "Health"
+  },
+  {
+    "id": 11,
+    "title": "Fashion Forward: Style Meets Tech",
+    "date": "2027-11-12",
+    "venue": "Fashion Dome, Liverpool",
+    "description": "Where haute couture and wearable tech align.",
+    "category": "Fashion"
+  },
+  {
+    "id": 12,
+    "title": "The Laugh Track: Comedy Writing Symposium",
+    "date": "2027-12-08",
+    "venue": "Comedy Corner, Glasgow",
+    "description": "A hilarious gathering of writers and performers sharing the secrets of comedic brilliance.",
+    "category": "Entertainment"
+  }
+]

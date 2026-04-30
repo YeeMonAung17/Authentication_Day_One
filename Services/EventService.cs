@@ -38,6 +38,11 @@ namespace ConferenceManager.Services
             _eventModel.AddEvent(newEvent);
         }
 
+        public List<Attendee> GetAttendees(int eventId)
+        {
+            _eventModel.GetAttendees(eventId);
+
+        }
 
 
     }

@@ -14,6 +14,10 @@
 
         public string category {  get; set; }
 
+        public List<Attendee> attendee = new List<Attendee>();
+
+        public List<Speaker> speaker = new List<Speaker>();
+
 
     }
 }

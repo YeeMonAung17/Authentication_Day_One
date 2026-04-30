@@ -10,6 +10,8 @@ namespace ConferenceManager.Repository
 
         private string _filePath = ".\\Resources\\EventData.json";
 
+        private readonly List<Event> _events = new List<Event>();
+
         public List<Event> GetAllEvents()
         {
             var json = File.ReadAllText(_filePath);
@@ -22,6 +24,20 @@ namespace ConferenceManager.Repository
             var events = GetAllEvents();
             return events.FirstOrDefault(a => a.id == id);
         }
+
+        public void AddEvent(Event newEvent)
+        {
+            var currentEvents = GetAllEvents();
+
+            currentEvents.Add(newEvent);
+
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string updatedJson = JsonSerializer.Serialize(currentEvents, options);
+
+            File.WriteAllText(_filePath, updatedJson);
+        }
+
+
     }
 
 

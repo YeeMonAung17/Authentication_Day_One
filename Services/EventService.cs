@@ -9,6 +9,9 @@ namespace ConferenceManager.Services
 
         public Event? GetEventById(int id);
 
+        public void AddEvent(Event newEvent);
+
+
 
     }
 
@@ -28,6 +31,11 @@ namespace ConferenceManager.Services
         public Event? GetEventById(int id)
         {
             return _eventModel.GetEventById(id);
+        }
+
+        public void AddEvent(Event newEvent)
+        {
+            _eventModel.AddEvent(newEvent);
         }
 
 

@@ -1,6 +1,7 @@
-﻿using ConferenceManager.Services;
+﻿using ConferenceManager.Models;
+using ConferenceManager.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
 namespace ConferenceManager.Controllers
 {
 
@@ -35,6 +36,19 @@ namespace ConferenceManager.Controllers
                 return NotFound();
             }
             return Ok(events);
+        }
+
+        [HttpPost]
+        [Authorize]
+
+        public IActionResult AddEvent([FromBody] Event newEvent)
+        {
+            if (newEvent == null) return BadRequest();
+
+             _eventService.AddEvent(newEvent);
+
+            return Ok(newEvent);
+
         }
 
     }

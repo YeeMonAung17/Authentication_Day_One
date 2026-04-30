@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Code & Coffee: Java Jams 2027",
+    "title": "Code \u0026 Coffee: Java Jams 2027",
     "date": "2027-01-15",
     "venue": "Tech Space, London",
-    "description": "Do you like caffeine? Do you like code? You're in the right place.",
+    "description": "Do you like caffeine? Do you like code? You\u0027re in the right place.",
     "category": "Technology"
   },
   {
@@ -20,12 +20,12 @@
     "title": "Plant-Powered Planet",
     "date": "2027-03-12",
     "venue": "Sustainability Hub, Brighton",
-    "description": "Let's explore sustainable living through plant-based innovation and eco-friendly practices.",
+    "description": "Let\u0027s explore sustainable living through plant-based innovation and eco-friendly practices.",
     "category": "Sustainability"
   },
   {
     "id": 4,
-    "title": "Byte Me! Gaming & eSports Con",
+    "title": "Byte Me! Gaming \u0026 eSports Con",
     "date": "2027-04-05",
     "venue": "GameWorld Arena, Birmingham",
     "description": "Tournaments, panels, sneak peeks at upcoming releases - and pizza!",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "title": "Future Frontier: AI & Robotics Forum",
+    "title": "Future Frontier: AI \u0026 Robotics Forum",
     "date": "2027-06-18",
     "venue": "Innovation Centre, Cambridge",
     "description": "An in-depth look at the intersection of artificial intelligence and robotics shaping our world.",
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "title": "Books & Brews: Storyteller's Retreat",
+    "title": "Books \u0026 Brews: Storyteller\u0027s Retreat",
     "date": "2027-07-22",
     "venue": "The Old Library, Edinburgh",
     "description": "An intimate gathering for writers and book lovers to share ideas over craft beer.",
@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "title": "Starry Nights: Astronomy & Beyond",
+    "title": "Starry Nights: Astronomy \u0026 Beyond",
     "date": "2027-09-10",
     "venue": "Cosmos Centre, Cardiff",
     "description": "Stargaze and explore the universe with us.",
@@ -94,5 +94,37 @@
     "venue": "Comedy Corner, Glasgow",
     "description": "A hilarious gathering of writers and performers sharing the secrets of comedic brilliance.",
     "category": "Entertainment"
+  },
+  {
+    "id": 0,
+    "title": "Yee",
+    "date": "string",
+    "venue": "string",
+    "description": "string",
+    "category": "string"
+  },
+  {
+    "id": 1,
+    "title": "Code \u0026 Coffee: Java Jams 2027",
+    "date": "2027-01-15",
+    "venue": "Tech Space, London",
+    "description": "Do you like caffeine? Do you like code? You\u0027re in the right place.",
+    "category": "Technology"
+  },
+  {
+    "id": 1,
+    "title": "Code \u0026 Coffee: Java Jams 2027",
+    "date": "2027-01-15",
+    "venue": "Tech Space, London",
+    "description": "Do you like caffeine? Do you like code? You\u0027re in the right place.",
+    "category": "Technology"
+  },
+  {
+    "id": 1,
+    "title": "Code \u0026 Coffee: Java Jams 2027",
+    "date": "2027-01-15",
+    "venue": "Tech Space, London",
+    "description": "Do you like caffeine? Do you like code? You\u0027re in the right place.",
+    "category": "Technology"
   }
 ]

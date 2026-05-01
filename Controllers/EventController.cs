@@ -59,6 +59,31 @@ namespace ConferenceManager.Controllers
             return Ok(speakers);
         }
 
+
+        [HttpGet("admin/attendees")]
+        [Authorize(Roles = "Admin")]
+        public IActionResult GetAllAttendees()
+        {
+            var allAttendees = _eventService.GetAllAttendees();
+
+            if (allAttendees == null || !allAttendees.Any())
+            {
+                return Ok(new List<Attendee>()); // Return empty list if none exist
+            }
+
+            return Ok(allAttendees);
+        }
+
+
+        [HttpGet("test-claims")]
+        [Authorize]
+        public IActionResult TestClaims()
+        {
+            var claims = User.Claims.Select(c => new { c.Type, c.Value }).ToList();
+            return Ok(claims);
+        }
+
+
         [HttpGet("{eventId}/attendees")]
 
         public IActionResult GetAttendees(int eventId)
@@ -72,8 +97,7 @@ namespace ConferenceManager.Controllers
         [Authorize]
         public IActionResult GetAttendeeById(int attendeeId)
         {
-            var currentUserId = User.FindFirst("sub")?.Value
-                            ?? User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUserId = User.FindFirst("sub")?.Value;
 
             if (string.IsNullOrEmpty(currentUserId)) return Unauthorized();
 
@@ -85,10 +109,8 @@ namespace ConferenceManager.Controllers
                 return NotFound($"No attendee record found with ID {attendeeId}");
             }
 
-            if(currentUserId !.Equals(attendeeId))
-            {
+            if (attendee.UserId != currentUserId)
                 return Forbid();
-            }
 
             return Ok(attendee);
         }

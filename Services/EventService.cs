@@ -22,6 +22,7 @@ namespace ConferenceManager.Services
         public Attendee? GetAttendeeById(int attendeeId);
 
 
+        public IEnumerable<Attendee> GetAllAttendees();
 
 
     }
@@ -39,6 +40,8 @@ namespace ConferenceManager.Services
             return _eventModel.GetAllEvents();
         }
 
+
+
         public Event? GetEventById(int id)
         {
             return _eventModel.GetEventById(id);
@@ -47,6 +50,13 @@ namespace ConferenceManager.Services
         public void AddEvent(Event newEvent)
         {
             _eventModel.AddEvent(newEvent);
+        }
+
+
+        public IEnumerable<Attendee> GetAllAttendees()
+        {
+            return _eventModel.GetAllEvents()
+        .SelectMany(e => e.attendees ?? new List<Attendee>());
         }
 
         public List<Attendee> GetAttendees(int eventId)

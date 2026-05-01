@@ -33,7 +33,14 @@
     "venue": "Sustainability Hub, Brighton",
     "description": "Let\u0027s explore sustainable living through plant-based innovation and eco-friendly practices.",
     "category": "Sustainability",
-    "attendees": [],
+    "attendees": [
+      {
+        "Id": 1,
+        "Name": "Yee",
+        "EventId": 3,
+        "UserId": "1234567890"
+      }
+    ],
     "speakers": []
   },
   {

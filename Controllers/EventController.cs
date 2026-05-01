@@ -12,7 +12,7 @@ namespace ConferenceManager.Controllers
     {
         private readonly IEventService _eventService;
 
-        public EventController (IEventService eventService)
+        public EventController(IEventService eventService)
         {
             _eventService = eventService;
         }
@@ -46,7 +46,7 @@ namespace ConferenceManager.Controllers
         {
             if (newEvent == null) return BadRequest();
 
-             _eventService.AddEvent(newEvent);
+            _eventService.AddEvent(newEvent);
 
             return Ok(newEvent);
 
@@ -67,9 +67,35 @@ namespace ConferenceManager.Controllers
             return Ok(attendees);
         }
 
+
+        [HttpGet("attendees/{attendeeId}")]
+        [Authorize]
+        public IActionResult GetAttendeeById(int attendeeId)
+        {
+            var currentUserId = User.FindFirst("sub")?.Value
+                            ?? User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(currentUserId)) return Unauthorized();
+
+
+            var attendee = _eventService.GetAttendeeById(attendeeId);
+
+            if (attendee == null)
+            {
+                return NotFound($"No attendee record found with ID {attendeeId}");
+            }
+
+            if(currentUserId !.Equals(attendeeId))
+            {
+                return Forbid();
+            }
+
+            return Ok(attendee);
+        }
+
         [HttpPost("{eventId}/attendees")]
         [Authorize]
-        public IActionResult AddAttendee(int eventId,[FromBody] Attendee attendee)
+        public IActionResult AddAttendee(int eventId, [FromBody] Attendee attendee)
         {
             // 1. validate input
             if (attendee == null || string.IsNullOrEmpty(attendee.Name))
@@ -86,14 +112,17 @@ namespace ConferenceManager.Controllers
 
             if (!success)
             {
-                var ev = _eventService.GetEventById(eventId);
-                if (ev == null)
-                    return NotFound("Event not found");
+                return Conflict("Could not add attendee.");
 
-                return Conflict("User is already attending this event");
+
             }
 
-            return Ok(attendee);
+            return Ok(new
+            {
+                Message = "Registration successful",
+                AttendeeId = attendee.Id
+            });
+
 
         }
 

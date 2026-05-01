@@ -11,6 +11,10 @@ namespace ConferenceManager.Services
 
         public void AddEvent(Event newEvent);
 
+        public List<Attendee> GetAttendees(int eventId);
+
+        public List<Speaker> GetSpeakers(int eventId);
+
 
 
     }
@@ -40,9 +44,20 @@ namespace ConferenceManager.Services
 
         public List<Attendee> GetAttendees(int eventId)
         {
-            _eventModel.GetAttendees(eventId);
+            var ev = _eventModel.GetEventById(eventId);
+            if (ev == null) throw new Exception("Event not FOUND");
+            return ev?.attendees ?? new List<Attendee>();
 
         }
+
+        public List<Speaker> GetSpeakers(int eventId)
+        {
+
+            var ev = _eventModel.GetEventById(eventId);
+            if (ev == null) throw new Exception("Event Not FOUND");
+            return ev?.speakers ?? new List<Speaker>();
+        }
+
 
 
     }

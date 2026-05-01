@@ -14,9 +14,9 @@
 
         public string category {  get; set; }
 
-        public List<Attendee> attendee = new List<Attendee>();
+        public List<Attendee> attendees { get; set; } = new ();
 
-        public List<Speaker> speaker = new List<Speaker>();
+        public List<Speaker> speakers { get; set; } = new ();
 
 
     }

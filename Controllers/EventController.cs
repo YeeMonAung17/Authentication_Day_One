@@ -51,5 +51,22 @@ namespace ConferenceManager.Controllers
 
         }
 
+        [HttpGet("{eventId}/speakers")]
+        public IActionResult GetSpeakers(int eventId)
+        {
+            var speakers = _eventService.GetSpeakers(eventId);
+            return Ok(speakers);
+        }
+
+        [HttpGet("{eventId}/attendees")]
+
+        public IActionResult GetAttendees(int eventId)
+        {
+            var attendees = _eventService.GetAttendees(eventId);
+            return Ok(attendees);
+        }
+
+
+
     }
 }

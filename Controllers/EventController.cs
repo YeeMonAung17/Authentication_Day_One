@@ -2,6 +2,7 @@
 using ConferenceManager.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 namespace ConferenceManager.Controllers
 {
 
@@ -65,6 +66,37 @@ namespace ConferenceManager.Controllers
             var attendees = _eventService.GetAttendees(eventId);
             return Ok(attendees);
         }
+
+        [HttpPost("{eventId}/attendees")]
+        [Authorize]
+        public IActionResult AddAttendee(int eventId,[FromBody] Attendee attendee)
+        {
+            // 1. validate input
+            if (attendee == null || string.IsNullOrEmpty(attendee.Name))
+                return BadRequest("Invalid attendee data");
+
+            // 2. get user id from JWT
+            var userId = User.FindFirst("sub")?.Value
+                             ?? User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrWhiteSpace(userId))
+                return Unauthorized();
+
+            var success = _eventService.AddAttendee(eventId, userId, attendee);
+
+            if (!success)
+            {
+                var ev = _eventService.GetEventById(eventId);
+                if (ev == null)
+                    return NotFound("Event not found");
+
+                return Conflict("User is already attending this event");
+            }
+
+            return Ok(attendee);
+
+        }
+
 
 
 

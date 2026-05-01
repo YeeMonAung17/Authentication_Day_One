@@ -5,7 +5,9 @@
     "date": "2027-01-15",
     "venue": "Tech Space, London",
     "description": "Do you like caffeine? Do you like code? You\u0027re in the right place.",
-    "category": "Technology"
+    "category": "Technology",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 2,
@@ -13,7 +15,16 @@
     "date": "2027-02-10",
     "venue": "Creative Quarter, Manchester",
     "description": "Digital design at the cutting edge.",
-    "category": "Design"
+    "category": "Design",
+    "attendees": [
+      {
+        "Id": 1,
+        "Name": "Link of Hyrule",
+        "EventId": 2,
+        "UserId": "1234567890"
+      }
+    ],
+    "speakers": []
   },
   {
     "id": 3,
@@ -21,7 +32,9 @@
     "date": "2027-03-12",
     "venue": "Sustainability Hub, Brighton",
     "description": "Let\u0027s explore sustainable living through plant-based innovation and eco-friendly practices.",
-    "category": "Sustainability"
+    "category": "Sustainability",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 4,
@@ -29,7 +42,9 @@
     "date": "2027-04-05",
     "venue": "GameWorld Arena, Birmingham",
     "description": "Tournaments, panels, sneak peeks at upcoming releases - and pizza!",
-    "category": "Gaming"
+    "category": "Gaming",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 5,
@@ -37,7 +52,9 @@
     "date": "2027-05-20",
     "venue": "Influence Hall, Bristol",
     "description": "Decoding internet culture and discussing how memes shape industries and brand strategies.",
-    "category": "Social Media"
+    "category": "Social Media",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 6,
@@ -45,7 +62,9 @@
     "date": "2027-06-18",
     "venue": "Innovation Centre, Cambridge",
     "description": "An in-depth look at the intersection of artificial intelligence and robotics shaping our world.",
-    "category": "Technology"
+    "category": "Technology",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 7,
@@ -53,7 +72,9 @@
     "date": "2027-07-22",
     "venue": "The Old Library, Edinburgh",
     "description": "An intimate gathering for writers and book lovers to share ideas over craft beer.",
-    "category": "Literature"
+    "category": "Literature",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 8,
@@ -61,7 +82,9 @@
     "date": "2027-08-14",
     "venue": "Taste Pavilion, Glasgow",
     "description": "Showcasing the future of food technology and innovative recipes.",
-    "category": "Food"
+    "category": "Food",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 9,
@@ -69,7 +92,9 @@
     "date": "2027-09-10",
     "venue": "Cosmos Centre, Cardiff",
     "description": "Stargaze and explore the universe with us.",
-    "category": "Science"
+    "category": "Science",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 10,
@@ -77,7 +102,9 @@
     "date": "2027-10-25",
     "venue": "Wellness Hub, Leeds",
     "description": "A two-day competition for developing tech-driven solutions for health and wellness challenges.",
-    "category": "Health"
+    "category": "Health",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 11,
@@ -85,7 +112,9 @@
     "date": "2027-11-12",
     "venue": "Fashion Dome, Liverpool",
     "description": "Where haute couture and wearable tech align.",
-    "category": "Fashion"
+    "category": "Fashion",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 12,
@@ -93,7 +122,9 @@
     "date": "2027-12-08",
     "venue": "Comedy Corner, Glasgow",
     "description": "A hilarious gathering of writers and performers sharing the secrets of comedic brilliance.",
-    "category": "Entertainment"
+    "category": "Entertainment",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 0,
@@ -101,7 +132,9 @@
     "date": "string",
     "venue": "string",
     "description": "string",
-    "category": "string"
+    "category": "string",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 1,
@@ -109,7 +142,9 @@
     "date": "2027-01-15",
     "venue": "Tech Space, London",
     "description": "Do you like caffeine? Do you like code? You\u0027re in the right place.",
-    "category": "Technology"
+    "category": "Technology",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 1,
@@ -117,7 +152,9 @@
     "date": "2027-01-15",
     "venue": "Tech Space, London",
     "description": "Do you like caffeine? Do you like code? You\u0027re in the right place.",
-    "category": "Technology"
+    "category": "Technology",
+    "attendees": [],
+    "speakers": []
   },
   {
     "id": 1,
@@ -125,6 +162,18 @@
     "date": "2027-01-15",
     "venue": "Tech Space, London",
     "description": "Do you like caffeine? Do you like code? You\u0027re in the right place.",
-    "category": "Technology"
+    "category": "Technology",
+    "attendees": [],
+    "speakers": []
+  },
+  {
+    "id": 1,
+    "title": "Code \u0026 Coffee: Java Jams 2027",
+    "date": "2027-01-15",
+    "venue": "Tech Space, London",
+    "description": "Do you like caffeine? Do you like code? You\u0027re in the right place.",
+    "category": "Technology",
+    "attendees": [],
+    "speakers": []
   }
 ]

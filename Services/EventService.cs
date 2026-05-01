@@ -1,5 +1,6 @@
 ﻿using ConferenceManager.Models;
 using ConferenceManager.Repository;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConferenceManager.Services
 {
@@ -14,6 +15,11 @@ namespace ConferenceManager.Services
         public List<Attendee> GetAttendees(int eventId);
 
         public List<Speaker> GetSpeakers(int eventId);
+
+        public bool AddAttendee(int eventId, string userId, Attendee attendee);
+
+        //public void GetAttendeeById(int attendeeId);
+
 
 
 
@@ -57,6 +63,36 @@ namespace ConferenceManager.Services
             if (ev == null) throw new Exception("Event Not FOUND");
             return ev?.speakers ?? new List<Speaker>();
         }
+
+        public bool AddAttendee(int eventId, string userId , Attendee attendee)
+        {
+            // 1. Get the MASTER list of all events
+            var allEvents = _eventModel.GetAllEvents();
+
+            // 2. Find the specific event inside THAT list
+            var ev = allEvents.FirstOrDefault(e => e.id == eventId);
+
+            if (ev == null) return false;
+
+            ev.attendees ??= new List<Attendee>();
+
+            if (ev.attendees.Any(a => a.UserId == userId)) return false;
+
+            // 3. Set the data
+            attendee.EventId = eventId;
+            attendee.UserId = userId;
+            attendee.Id = ev.attendees.Count + 1;
+
+            ev.attendees.Add(attendee);
+
+            // 4. CRITICAL: Save the modified master list back to the JSON file
+            _eventModel.UpdateEvents(allEvents);
+
+            return true;
+
+        }
+
+
 
 
 

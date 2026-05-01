@@ -18,6 +18,12 @@ namespace ConferenceManager.Repository
             return JsonSerializer.Deserialize<List<Event>>(json) ?? new List<Event>();
         }
 
+        public void UpdateEvents(List<Event> events)
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string updatedJson = JsonSerializer.Serialize(events, options);
+            File.WriteAllText(_filePath, updatedJson);
+        }
 
         public Event? GetEventById(int id)
         {

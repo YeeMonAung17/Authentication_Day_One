@@ -5,11 +5,14 @@
 
         public int Id { get; set; } 
 
+
+        public string Name { get; set; }
+
         //links to an event
         public int EventId { get; set; }
 
         //links to user in the system
 
-        public int UserId { get; set; }
+        public string? UserId { get; set; }
     }
 }
